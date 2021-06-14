@@ -3,19 +3,19 @@ import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 
-import  Posts  from './components/posts'
+import  {Posts, SinglePost}  from './components/posts'
 
 
 export default function App() {
   return (
       <>
         <BrowserRouter>
-            <Posts />
-            {/* <Switch>
+
+            <Switch>
                 
-                <Route exact path='/posts' component={ allPosts } />
-    
-            </Switch> */}
+                <Route exact path='/posts' component={ Posts } />
+                <Route path='/posts/:post_id' component={ SinglePost } />
+            </Switch>
 
         </BrowserRouter>
         </>
