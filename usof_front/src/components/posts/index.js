@@ -46,7 +46,7 @@ export function ElementPost(props) {
     return (
         <div>
 
-           <Link to={'/posts/'+props.post.id}><h2>{props.post.title}</h2></Link>
+           <Link to={'/posts/'+props.post.id}><h2>{props.post.title}</h2>
            <p>{props.post.content}</p>
            <p>Author: <i>{user.name}</i></p>
         
@@ -55,6 +55,7 @@ export function ElementPost(props) {
                     <li>{category.title}</li>
                     )}
         <p>Likes: {likes}</p>
+        </Link>
         <hr />
         </div>
     )
