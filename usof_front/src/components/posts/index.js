@@ -12,7 +12,7 @@ export class Posts extends React.Component{
     componentDidMount() {
         axios.get(`http://127.0.0.1:8000/api/posts`)
           .then(res => {
-            const posts = res.data;
+            const posts = res.data.data;
             this.setState({ posts });
           })
       }
